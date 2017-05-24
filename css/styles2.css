@@ -369,6 +369,10 @@ body{
 	border-top: 2px #333 solid;
 	margin-top: 10px;
 }
+.infoWrap{
+	word-wrap:break-word;
+	margin-right:10px;
+}
 .infoWrap p.iTitle{
 	font-weight:bold;
 }
@@ -387,4 +391,43 @@ body{
 .infoWrap a:hover{
 	text-decoration:none;
 	color:#6C3C25;
+}
+.firstDigit{
+	font-size:32px;
+	color:#67809F;
+}
+.contactBtns{
+	text-align:center;
+	margin-top:50px;
+}
+.btnWrap{
+	margin-left:45%;
+	margin-right:auto;
+}
+.cntBtn{
+	float:left;
+	margin-left:20px;
+	cursor: pointer;
+	color:#FFFFFF;
+	border-radius: 3px;
+	padding: 5px 15px 5px;
+	background-color:#67809F;
+}
+.noselect {
+  -webkit-touch-callout: none; 
+    -webkit-user-select: none; 
+     -khtml-user-select: none;
+       -moz-user-select: none; 
+        -ms-user-select: none; 
+            user-select: none; 
+}
+.boldedText{
+	font-size:26px;
+}
+#piH{
+	display:none;
+}
+.phone{
+	float:left;
+	margin-left:20px;
 }
