@@ -55,3 +55,7 @@ function vissza(){
 bold(start_of_number);
 
 }
+function tovabb(){
+document.getElementById("infoWrap").innerHTML = "Köszönjük! Hamarosan felvesszük önnel a kapcsolatot.";
+
+}
