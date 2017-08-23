@@ -5,6 +5,7 @@
 <title>BME-KJK tárgygráf</title>
 <link rel="stylesheet" type="text/css" href="css/styles2.css" />
 <script src="js/jquery-1.11.0.min.js"></script>
+<script src="js/data_targyak.js"></script>
 <script src="js/szin.js"></script>
 <script src="js/data.js"></script>
 <script src="js/save.js"></script>
@@ -71,23 +72,36 @@
 	
 </div>
 
-
-<h4>Szakirány:</h4>
-<select id="szakirany" onchange="szakirany()">
-  <option>Válassz specializációt</option>
-  <option data-szak="gep">Gépjárművek</option>
-  <option data-szak="leg">Légijárművek</option>
-  <option data-szak="vas">Vasúti járművek</option>
-  <option data-szak="viz">Vízi járművek</option>
-  <option data-szak="mech">Járműmechatronika</option>
-  <option data-szak="gyar">Járműgyártás</option>
-  <option data-szak="ep">Építőgépek</option>
-  <option data-szak="aut">Automatizált anyagmozgató berendezések és robotok</option>
-  <option data-szak="fep">Járműfelépítmények</option>
-</select>
-
-
-
+<div class="middleSection">
+	<div class="szakiranyWrap">
+        <h4>Szakirány:</h4>
+        <select id="szakirany" onchange="szakirany()">
+          <option>Válassz specializációt</option>
+          <option data-szak="gep">Gépjárművek</option>
+          <option data-szak="leg">Légijárművek</option>
+          <option data-szak="vas">Vasúti járművek</option>
+          <option data-szak="viz">Vízi járművek</option>
+          <option data-szak="mech">Járműmechatronika</option>
+          <option data-szak="gyar">Járműgyártás</option>
+          <option data-szak="ep">Építőgépek</option>
+          <option data-szak="aut">Automatizált anyagmozgató berendezések és robotok</option>
+          <option data-szak="fep">Járműfelépítmények</option>
+        </select>
+    </div>
+    <div class="targyInfo">
+       	<div class="targyInfoBox">
+            <div class="targyInfoTitle">Név:</div>
+            <div class="targyInfoTitle">Kredit:</div>
+            <div class="targyInfoTitle">Tárgykód:</div>
+         </div>
+         <div class="targyInfoBox">
+            <div class="targyInfoSingle" id="targyNev">Matematika A1a</div>
+            <div class="targyInfoSingle" id="targyKredit">Kredit: 6</div>
+            <div class="targyInfoSingle" id="targyKód">TE90AX00</div>
+         </div>
+    </div>
+</div>
+<br class="clear" />
 <div class="felevWrap">
 			<div class="felev">
             	<div class="title">1. félév</div>
@@ -172,8 +186,11 @@
 <div class="minta elokovetelmeny">Előfeltétel</div>
 <div class="clear"></div>
 </div>
+<button onclick="myFunction()">Test</button>
 <br /><br />
-
+<div id="test1">asd</div>
+<div id="test2">asd</div>
+<div id="test3">asd</div>
 
    </div>
 </div>

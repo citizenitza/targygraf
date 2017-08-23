@@ -200,6 +200,8 @@ body{
 }
 .felevWrap{
 	padding-top:30px;
+	position:relative;
+	width:100%;
 }
 .felev{
 	width:12%;
@@ -431,3 +433,27 @@ body{
 	float:left;
 	margin-left:20px;
 }
+/* Info section ********************************************/
+.szakiranyWrap{
+	position:relative;
+	width:40%;
+	float:left;
+}
+.targyInfo{
+	position:relative;
+	width:58%;
+	float:left;
+	background:#E2D1C2;
+	border-radius:1px;
+	font-size:14px;
+	border:solid 1px #999999;
+}
+.targyInfoSingle{
+	margin-left:5px;
+}
+.targyInfoBox{
+	position:relative;
+	float:left;
+	width:25%;
+}
+/* Info section END ********************************************/

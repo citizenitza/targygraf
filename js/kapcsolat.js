@@ -51,8 +51,10 @@ bold(start_of_number);
 
 }
 function vissza(){
-	start_of_number--;
-bold(start_of_number);
+	if(start_of_number >= 0){
+		start_of_number--;
+		bold(start_of_number);
+	}
 
 }
 function tovabb(){
