@@ -5,6 +5,7 @@
 <title>BME-KJK tárgygráf</title>
 <link rel="stylesheet" type="text/css" href="css/styles2.css" />
 <script src="js/jquery-1.11.0.min.js"></script>
+<script src="js/data_targyak.js"></script>
 <script src="js/szin.js"></script>
 <script src="js/data.js"></script>
 <script src="js/save.js"></script>
@@ -15,6 +16,7 @@
  </head>
 
 <body onunload="pageUnload()">
+<div id="type" data-szak="kozlek"></div>
 <div class="container">
     <div class="sidebar">
 		<div class="sidebarInner">
@@ -73,8 +75,10 @@
 	
 </div>
 
-
+<div class="middleSection">
+	<div class="szakiranyWrap">
 <h4>Szakirány:</h4>
+<div class="selectWrap">
 <select id="szakirany" onchange="szakirany()">
   <option>Válassz specializációt</option>
   <option data-szak="koz">Közúti közlekedési folyamatok</option>
@@ -82,7 +86,32 @@
   <option data-szak="leg">Légi közlekedési folyamatok</option>
   <option data-szak="viz">Vízi közlekedési folyamatok</option>
 </select>
-
+</div>
+    </div>
+    <div class="targyInfo">
+       	<div class="targyInfoBox boxNarrow">
+            <div class="targyInfoTitle">Név:</div>
+            <div class="targyInfoTitle">Kredit:</div>
+            <div class="targyInfoTitle">Tárgykód:</div>
+         </div>
+         <div class="targyInfoBox">
+            <div class="targyInfoSingle" id="targyNev"></div>
+            <div class="targyInfoSingle" id="targyKredit"></div>
+            <div class="targyInfoSingle" id="targyKod"></div>
+         </div>
+          <div class="targyInfoBox boxNarrow2">
+            <div class="targyInfoTitle">Követelmény:</div>
+            <div class="targyInfoTitle">Tanszék:</div>
+            <div class="targyInfoTitle">Felelős oktató:</div>
+         </div>
+         <div class="targyInfoBox">
+            <div class="targyInfoSingle" id="targyKovetelmeny"></div>
+            <div class="targyInfoSingle" id="targyTanszek"></div>
+            <div class="targyInfoSingle" id="targyFelelos"></div>
+         </div>
+    </div>
+</div>
+<br class="clear" />
 
 
 <div class="felevWrap">
@@ -108,8 +137,9 @@
             <div class="title">3. félév</div>
             	<div id="31" data-elo="21" data-uto="41 52 53" data-felveheto="0" data-status="0" data-kredit="4" class="targy">Matematika A3</div>
                 <div id="32" data-elo="23" data-uto="43" data-felveheto="0" data-status="0" data-kredit="4" class="targy">Mechanika 2</div>
+                 <div id="33" data-elo="" data-uto="" data-felveheto="0" data-status="0" data-kredit="4" class="targy">Menedzsment és vállakozásgazdaságtan</div>
+                 
                 <div id="34" data-elo="21" data-uto="" data-felveheto="0" data-status="0" data-kredit="3" class="targy">Hőtan</div>
-                <div id="33" data-elo="" data-uto="" data-felveheto="0" data-status="0" data-kredit="4" class="targy">Menedzsment és vállakozásgazdaságtan</div>
                 <div id="35" data-elo="26" data-uto="" data-felveheto="0" data-status="0" data-kredit="3" class="targy">Járműelemek</div>
                 <div id="36" data-elo="" data-uto="" data-felveheto="0" data-status="0" data-kredit="3" class="targy">Közlekedésföldrajz</div>
                 <div id="37" data-elo="22" data-uto="" data-felveheto="0" data-status="0" data-kredit="4" class="targy">Anyagtechnológia, járműfenntartás</div>
@@ -119,7 +149,7 @@
             <div class="felev">
             <div class="title">4. félév</div>
             	<div id="41" data-elo="31 15" data-uto="" data-felveheto="0" data-status="0" data-kredit="3" class="targy">Áramlástan</div>
-                <div id="42" data-elo="" data-uto="" data-felveheto="0" data-status="0" data-kredit="3" class="targy">Közlekedéstatisztika </div>
+                <div id="42" data-elo="" data-uto="" data-felveheto="0" data-status="0" data-kredit="3" class="targy">Közlekedésstatisztika </div>
                 <div id="43" data-elo="" data-uto="k57 v57" data-felveheto="0" data-status="0" data-kredit="5" class="targy">Közlekedési technológia</div>
                 <div id="44" data-elo="14 15" data-uto="" data-felveheto="0" data-status="0" data-kredit="2" class="targy">Járműdinamika</div>
                 <div id="45" data-elo="16" data-uto="" data-felveheto="0" data-status="0" data-kredit="3" class="targy">Számítógépes műszaki alkalmazás</div>
@@ -140,11 +170,11 @@
                 </div>
             <div class="felev">
                  <div class="title">6. félév</div>
-            	<div id="61" data-elo="" data-uto="" data-felveheto="0" data-status="0"  data-kredit="5" class="targy">Közlekedésgazdaságtan</div>
+            	<div id="61" data-elo="" data-uto="" data-felveheto="0" data-status="0"  data-kredit="5" class="targy">Közlekedés-gazdaságtan</div>
                 <div id="62" data-elo="" data-uto="" data-felveheto="0" data-status="0" data-kredit="2" class="targy">Köt.Vál. GH</div>
                 <div id="63" data-elo="" data-uto="" data-felveheto="0" data-status="0" data-kredit="2" class="targy">Menedzser tréning a kölekedésben</div>
                 <div id="64" data-elo="" data-uto="" data-felveheto="0" data-status="0" data-kredit="5" class="targy">Közlekedési hálózattervezés</div>
-                <div id="65" data-elo="" data-uto="" data-felveheto="0" data-status="0" data-kredit="2" class="targy">Minöségügy</div>
+                <div id="65" data-elo="" data-uto="" data-felveheto="0" data-status="0" data-kredit="2" class="targy">Minőségügy</div>
                 <div id="66" data-elo="" data-uto="" data-felveheto="0" data-status="0" data-kredit="2" class="targy">Szabadon választható tárgy 2</div>
            				<div class="szakirany" id="szakBlock_6">Válassz specializációt
                			</div>
@@ -154,10 +184,10 @@
             	<div id="71" data-elo="" data-uto="" data-felveheto="0" data-status="0" data-kredit="2" class="targy">Munkavédelem</div>
                 <div id="72" data-elo="" data-uto="" data-felveheto="0" data-status="0" data-kredit="2" class="targy">Köt. Vál. GH</div>
                 <div id="73" data-elo="" data-uto="" data-felveheto="0" data-status="0" data-kredit="5" class="targy">Kommunikációs rendszerek</div>
-                <div id="73" data-elo="" data-uto="" data-felveheto="0" data-status="0" data-kredit="15" class="targy">Szakdolgozat</div>
-                <div id="73" data-elo="" data-uto="" data-felveheto="0" data-status="0" data-kredit="2" class="targy">Szabadon választható tárgy 3</div>
-                <div id="74" data-elo="" data-uto="" data-felveheto="0" data-status="0" data-kredit="2" class="targy">Szabadon választható tárgy 4</div>
-                <div id="78" data-elo="" data-uto="" data-felveheto="0" data-status="0" data-kredit="2" class="targy">Szabadon választható tárgy 5</div>
+                <div id="74" data-elo="" data-uto="" data-felveheto="0" data-status="0" data-kredit="15" class="targy">Szakdolgozat</div>
+                <div id="75" data-elo="" data-uto="" data-felveheto="0" data-status="0" data-kredit="2" class="targy">Szabadon választható tárgy 3</div>
+                <div id="76" data-elo="" data-uto="" data-felveheto="0" data-status="0" data-kredit="2" class="targy">Szabadon választható tárgy 4</div>
+                <div id="77" data-elo="" data-uto="" data-felveheto="0" data-status="0" data-kredit="2" class="targy">Szabadon választható tárgy 5</div>
                             
                </div>
                <div class="clear"></div>
@@ -174,7 +204,8 @@
 <div class="clear"></div>
 </div>
 <br /><br />
-
+<div id="test1">asd</div>
+<div id="test2">asd</div>
 
    </div>
 </div>

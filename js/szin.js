@@ -63,13 +63,20 @@ $(document).on('mouseleave', '.targy', function() {
 		 var utoTomb = data_uto.split(" ");
 	  
 		 if(utoTomb.length == 1){
+		  if(class_tmp[0] == "undefined"){
+			  document.getElementById(data_uto).className = "targy";
+		  }else{
 		  document.getElementById(data_uto).className = class_tmp[0];
-		   
+		  }
 		 }
 		 else{
 			 var hossz = utoTomb.length;
 			for (i = 0; i < hossz; i++) {
-				 document.getElementById(utoTomb[i]).className = class_tmp[i];
+				  if(class_tmp[i] == "undefined"){
+					  document.getElementById(utoTomb[i]).className = "targy";
+		 		 }else{
+					 document.getElementById(utoTomb[i]).className = class_tmp[i];
+		 		 }
 		   } 		
 		
 		 }
@@ -81,13 +88,21 @@ $(document).on('mouseleave', '.targy', function() {
 		 var eloTomb = data_elo.split(" ");
 	  
 		 if(eloTomb.length == 1){
-		  document.getElementById(data_elo).className = class_tmp_elo[0];
-		   
+			 if(class_tmp_elo[0] == "undefined"){
+				 document.getElementById(data_elo).className = "targy";
+			 }else{
+		 	 document.getElementById(data_elo).className = class_tmp_elo[0];
+			 }
 		 }
 		 else{
 			 var hossz = eloTomb.length;
 			for (i = 0; i < hossz; i++) {
+				if(class_tmp_elo[i] == "undefined"){
+					document.getElementById(eloTomb[i]).className = "targy";
+				}
+				else{
 				 document.getElementById(eloTomb[i]).className =  class_tmp_elo[i];
+			}
 		   } 		
 		 }
 		}	
@@ -102,7 +117,11 @@ function setState() {
     jQuery(function($) {
 			var cusid_ele = document.getElementsByClassName('targy');
 			for (var i = 0; i < cusid_ele.length; ++i) {
-				var item = cusid_ele[i];  
+				var item = cusid_ele[i]; 
+				if(item.className == null){
+				//item.className = "targy";
+				//document.getElementById("test1").innerHTML += "1";
+				}
 				var felveheto = item.getAttribute("data-felveheto");
 				var status = item.getAttribute("data-status");
 					if(felveheto == 1){

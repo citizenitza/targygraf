@@ -46,7 +46,7 @@ function getSzakirany(szak, felev) {
 											break;
 										case 6:
 												block = createBlock("v67","","",5,"Integrált áruszállítási rendszerek");
-												block+= createBlock("v68","v55","",3,"Vasúti automatika II.");
+												block+= createBlock("v68","v55","",4,"Vasúti automatika II.");
 												block+= createBlock("v69","54","",3,"Vasúti informatika");
 											break;	
 							}
@@ -63,7 +63,7 @@ function getSzakirany(szak, felev) {
 											break;
 										case 6:
 												block = createBlock("l67","","",5,"Integrált áruszállítási rendszerek");
-												block+= createBlock("l68","l55","",3,"Légiközl. irányító és komm. rendszerek II.");
+												block+= createBlock("l68","l55","",4,"Légiközl. irányító és komm. rendszerek II.");
 												block+= createBlock("l69","54","",3,"Légi informatika");
 											break;	
 							}
@@ -80,7 +80,7 @@ function getSzakirany(szak, felev) {
 											break;
 										case 6:
 												block = createBlock("h67","","",5,"Integrált áruszállítási rendszerek");
-												block+= createBlock("h68","","",3,"Víziközl. irányító és komm. rendszerek II.");
+												block+= createBlock("h68","","",4,"Víziközl. irányító és komm. rendszerek II.");
 												block+= createBlock("h69","54","",3,"Hajózási informatika");
 											break;	
 							}

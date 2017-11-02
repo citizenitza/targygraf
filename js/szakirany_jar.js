@@ -75,7 +75,7 @@ function getSzakirany(szak, felev) {
 												block+= createBlock("v67","","",3,"Vasúti járművek karbantartása és javítása");
 												block+= createBlock("v68","24","",3,"Villamos vasútak II.");
 												block+= createBlock("v69","","",4,"Vasúti járművek üzeme és diagnosztikája");
-												block+= createBlock("v69","","",2,"Vasúti fékberendezések");
+												block+= createBlock("v692","","",2,"Vasúti fékberendezések");
 											break;
 										case 7:
 												block = createBlock("v75","","",3,"Megbízhatóság és biztonság");
@@ -88,10 +88,10 @@ function getSzakirany(szak, felev) {
 						//createBlock(id,elo,uto,kredit,nev);
 										case 4:
 												block =	createBlock("h47","23","h56",3,"Hajók hajtása I.");
-												block+= createBlock("h48","23","h57 h69",5,"Hajók elmélete I.");
+												block+= createBlock("h48","23","h57 h692",5,"Hajók elmélete I.");
 												break;
 										case 5:
-												block =	createBlock("h56","h47","",6,"Hajók hajtása II.");
+												block =	createBlock("h56","h47","",5,"Hajók hajtása II.");
 												block+= createBlock("h57","h48","h68 h76",4,"Hajók elmélete II.");
 												block+= createBlock("h58","32","h66",4,"Hajószerkezettan");
 													
@@ -117,7 +117,7 @@ function getSzakirany(szak, felev) {
 											break;
 										case 5:
 												block =	createBlock("m56","m48","m66",5,"Járműfedélzeti rendszerek II.");
-												block+= createBlock("m57","","m67",4,"Érzékelők és beavatkozók I.");
+												block+= createBlock("m57","","m67 m68",4,"Érzékelők és beavatkozók I.");
 												block+= createBlock("m58","","m68",4,"Járműirányítás I.");
 											break;
 										case 6:
@@ -207,7 +207,7 @@ function getSzakirany(szak, felev) {
 										case 5:
 												block =	createBlock("f56","","",4,"Törés és károsodás");
 												block+= createBlock("f57","","",4,"Szendvics szerkezetek");
-												block+= createBlock("f58","","",4,"Jármű hidraulika és pneumatika");
+												block+= createBlock("f58","","",5,"Felépítmény hidraulika és pneumatika");
 											break;
 										case 6:
 												block =	createBlock("f66","51","f75",8,"Felépítmények dinamikája");

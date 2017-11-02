@@ -5,6 +5,7 @@
 <title>BME-KJK tárgygráf</title>
 <link rel="stylesheet" type="text/css" href="css/styles2.css" />
 <script src="js/jquery-1.11.0.min.js"></script>
+<script src="js/data_targyak.js"></script>
 <script src="js/szin.js"></script>
 <script src="js/data.js"></script>
 <script src="js/save.js"></script>
@@ -13,6 +14,7 @@
  </head>
 
 <body onunload="pageUnload()">
+<div id="type" data-szak="logisztika"></div>
 <div class="container">
     <div class="sidebar">
 		<div class="sidebarInner">
@@ -69,7 +71,34 @@
 	</div>
 	
 </div>
-
+<div class="middleSection">
+	<div class="szakiranyWrap">
+&nbsp 
+    </div>
+    <div class="targyInfo">
+       	<div class="targyInfoBox boxNarrow">
+            <div class="targyInfoTitle">Név:</div>
+            <div class="targyInfoTitle">Kredit:</div>
+            <div class="targyInfoTitle">Tárgykód:</div>
+         </div>
+         <div class="targyInfoBox">
+            <div class="targyInfoSingle" id="targyNev"></div>
+            <div class="targyInfoSingle" id="targyKredit"></div>
+            <div class="targyInfoSingle" id="targyKod"></div>
+         </div>
+          <div class="targyInfoBox boxNarrow2">
+            <div class="targyInfoTitle">Követelmény:</div>
+            <div class="targyInfoTitle">Tanszék:</div>
+            <div class="targyInfoTitle">Felelős oktató:</div>
+         </div>
+         <div class="targyInfoBox">
+            <div class="targyInfoSingle" id="targyKovetelmeny"></div>
+            <div class="targyInfoSingle" id="targyTanszek"></div>
+            <div class="targyInfoSingle" id="targyFelelos"></div>
+         </div>
+    </div>
+</div>
+<br class="clear" />
 
 <div class="felevWrap">
 	<div class="felev">
@@ -92,11 +121,11 @@
             </div>
             <div class="felev">
              <div class="title">3. félév</div>
-            	<div id="31" data-elo="21" data-uto="41 53 54" data-felveheto="0" data-kredit="4" data-status="0" class="targy">Matematika A3</div>
+            	<div id="31" data-elo="21" data-uto="41 53 54 61" data-felveheto="0" data-kredit="4" data-status="0" class="targy">Matematika A3</div>
                 <div id="32" data-elo="23" data-uto="" data-felveheto="0" data-status="0" data-kredit="4" class="targy">Mechanika 2</div>
-                <div id="33" data-elo="" data-uto="42" data-felveheto="0" data-status="0" data-kredit="4"  class="targy">Menedzsment és vállakozásgazdaságtan</div>
+                <div id="33" data-elo="" data-uto="51" data-felveheto="0" data-status="0" data-kredit="4"  class="targy">Menedzsment és vállakozásgazdaságtan</div>
                 <div id="34" data-elo="" data-uto="47" data-felveheto="0" data-status="0" data-kredit="3" class="targy">Közlekedésföldrajz</div>
-                <div id="35" data-elo="22" data-uto="42" data-felveheto="0" data-status="0" data-kredit="4" class="targy">Anyagtechnológia, iparigyártórendszerek</div>
+                <div id="35" data-elo="22" data-uto="" data-felveheto="0" data-status="0" data-kredit="4" class="targy">Anyagtechnológia, iparigyártórendszerek</div>
                 <div id="36" data-elo="26" data-uto="" data-felveheto="0" data-status="0" data-kredit="3" class="targy">Járműelemek</div>
                 <div id="37" data-elo="16" data-uto="45" data-felveheto="0" data-status="0" data-kredit="5" class="targy">Logisztikai adatbázis rendszerek</div>
                 <div id="38" data-elo="" data-uto="47" data-felveheto="0" data-status="0" data-kredit="3" class="targy">Csomagolástechnika</div>
@@ -104,40 +133,40 @@
             <div class="felev">
             <div class="title">4. félév</div>
             	<div id="41" data-elo="31 15" data-uto="" data-felveheto="0" data-status="0" data-kredit="3" class="targy">Áramlástan</div>
-                <div id="42" data-elo="33 35" data-uto="51 56" data-felveheto="0" data-status="0" data-kredit="4" class="targy">Üzemszervezés alapjai</div>
-                <div id="43" data-elo="" data-uto="51" data-felveheto="0" data-status="0" data-kredit="2" class="targy">Logisztikai menedzsment</div>
+                <div id="42" data-elo="" data-uto="51 56" data-felveheto="0" data-status="0" data-kredit="4" class="targy">Üzemszervezés alapjai</div>
+                <div id="43" data-elo="" data-uto="51 57" data-felveheto="0" data-status="0" data-kredit="2" class="targy">Logisztikai menedzsment</div>
                 <div id="44" data-elo="" data-uto="" data-felveheto="0" data-status="0" data-kredit="2" class="targy">Üzleti jog</div>
-                <div id="45" data-elo="37" data-uto="56 57" data-felveheto="0" data-status="0" data-kredit="5" class="targy">Logisztikai információs rendszerek</div>
+                <div id="45" data-elo="37" data-uto="" data-felveheto="0" data-status="0" data-kredit="5" class="targy">Logisztikai információs rendszerek</div>
                 <div id="46" data-elo="24" data-uto="" data-felveheto="0" data-status="0" data-kredit="5" class="targy">Logisztikai identifikációs rendszerek</div>
-                <div id="47" data-elo="34 38" data-uto="57" data-felveheto="0" data-status="0" data-kredit="5"  class="targy">Szállítási logisztika</div>
+                <div id="47" data-elo="34 38" data-uto="65" data-felveheto="0" data-status="0" data-kredit="5"  class="targy">Szállítási logisztika</div>
                 <div id="48" data-elo="" data-uto="" data-felveheto="0" data-status="0" data-kredit="4" class="targy">Szállítmányozás alapjai</div>
             </div>
             <div class="felev">
             	<div class="title">5. félév</div>
-            	<div id="51" data-elo="42 43" data-uto="" data-felveheto="0" data-status="0" data-kredit="3" class="targy">Bevezetés a lean szemléletbe</div>
+            	<div id="51" data-elo="33 42 43" data-uto="" data-felveheto="0" data-status="0" data-kredit="3" class="targy">Bevezetés a lean szemléletbe</div>
                 <div id="52" data-elo="" data-uto="" data-felveheto="0" data-status="0" data-kredit="2" class="targy">Munkavédelem</div>
-                <div id="53" data-elo="31" data-uto="61" data-felveheto="0" data-status="0" data-kredit="3" class="targy">Statisztika</div>
+                <div id="53" data-elo="31" data-uto="" data-felveheto="0" data-status="0" data-kredit="3" class="targy">Statisztika</div>
                 <div id="54" data-elo="16 24 31" data-uto="" data-felveheto="0" data-status="0" data-kredit="3" class="targy">Irányítástechnika</div>
-                <div id="55" data-elo="23" data-uto="" data-felveheto="0" data-status="0" data-kredit="5" class="targy">Anyagmozgató gépek és eszközök</div>
-                <div id="56" data-elo="42 45" data-uto="63 65" data-felveheto="0" data-status="0" data-kredit="5" class="targy">Termelési logisztika</div>
-                <div id="57" data-elo="45 47" data-uto="63 65" data-felveheto="0" data-status="0" data-kredit="5" class="targy">Ellátási-eloszlási rendszerek</div>
+                <div id="55" data-elo="23" data-uto="63" data-felveheto="0" data-status="0" data-kredit="5" class="targy">Anyagmozgató gépek és eszközök</div>
+                <div id="56" data-elo="42" data-uto="63 65" data-felveheto="0" data-status="0" data-kredit="5" class="targy">Termelési logisztika</div>
+                <div id="57" data-elo="43" data-uto="63 65" data-felveheto="0" data-status="0" data-kredit="5" class="targy">Ellátási-eloszlási rendszerek</div>
                 <div id="58" data-elo="" data-uto="" data-felveheto="0" data-status="0" data-kredit="2" class="targy">Szabadon választható tárgy 1</div>
                 <div id="59" data-elo="" data-uto="" data-felveheto="0" data-status="0" data-kredit="2" class="targy">Szabadon választható tárgy 2</div>
             </div>
             <div class="felev">
                  <div class="title">6. félév</div>
-            	<div id="61" data-elo="53" data-uto="" data-felveheto="0" data-status="0" data-kredit="7" class="targy">Operációkutatás és döntéstámogatás</div>
+            	<div id="61" data-elo="31" data-uto="" data-felveheto="0" data-status="0" data-kredit="7" class="targy">Operációkutatás és döntéstámogatás</div>
                 <div id="62" data-elo="" data-uto="" data-felveheto="0" data-status="0" data-kredit="2" class="targy">Minőségügy</div>
-                <div id="63" data-elo="56 57" data-uto="" data-felveheto="0" data-status="0" data-kredit="5" class="targy">Anyagmozgatási és raktározási folyamatok</div>
-                <div id="64" data-elo="24" data-uto="" data-felveheto="0" data-status="0" data-kredit="5" class="targy">Logisztikai rendszerek automatizálása</div>
-                <div id="65" data-elo="56 57" data-uto="71" data-felveheto="0" data-status="0" data-kredit="5" class="targy">Logisztikai projektirányítás</div>
+                <div id="63" data-elo="55 56 57" data-uto="71" data-felveheto="0" data-status="0" data-kredit="5" class="targy">Anyagmozgatási és raktározási folyamatok</div>
+                <div id="64" data-elo="24" data-uto="71" data-felveheto="0" data-status="0" data-kredit="5" class="targy">Logisztikai rendszerek automatizálása</div>
+                <div id="65" data-elo="47 56 57" data-uto="71" data-felveheto="0" data-status="0" data-kredit="5" class="targy">Logisztikai projektirányítás</div>
                 <div id="66" data-elo="" data-uto="" data-felveheto="0" data-status="0" data-kredit="2" class="targy">Köt. vál.(gazdasági - humán) 1</div>
                 <div id="67" data-elo="" data-uto="" data-felveheto="0" data-status="0" data-kredit="2" class="targy">Köt. vál.(gazdasági - humán) 2</div>
                 <div id="68" data-elo="" data-uto="" data-felveheto="0" data-status="0" data-kredit="2" class="targy">Szabadon választható tárgy 3</div>
             </div>
             <div class="felev">
               <div class="title">7. félév</div>
-            	<div id="71" data-elo="65" data-uto="" data-felveheto="0" data-status="0" data-kredit="11" class="targy">Logisztikai projekt</div>
+            	<div id="71" data-elo="63 64 65" data-uto="" data-felveheto="0" data-status="0" data-kredit="11" class="targy">Logisztikai projekt</div>
                 <div id="72" data-elo="" data-uto="" data-felveheto="0" data-status="0" data-kredit="15" class="targy">Szakdolgozat</div>
                 <div id="73" data-elo="" data-uto="" data-felveheto="0" data-status="0" data-kredit="2" class="targy">Szabadon választható tárgy 4</div>
                 <div id="74" data-elo="" data-uto="" data-felveheto="0" data-status="0" data-kredit="2" class="targy">Szabadon választható tárgy 5</div>

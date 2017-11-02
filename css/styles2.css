@@ -6,6 +6,9 @@ body {
     padding:50px;
     background-color:white;
 }
+.pageWrap{
+	min-width:1085px;
+}
 .s-hidden {
     visibility:hidden;
     padding-right:10px;
@@ -230,8 +233,8 @@ body{
 	padding-top:3px;
 	padding-bottom:3px;
 	padding-left:3px;
-	padding-right:3px;
 	font-family: 'raleway-semibold';
+	padding-right:3px;
 	  -webkit-touch-callout: none; /* iOS Safari */
     -webkit-user-select: none; /* Chrome/Safari/Opera */
      -khtml-user-select: none; /* Konqueror */
@@ -255,7 +258,7 @@ body{
 	padding-bottom:3px;
 	padding-left:3px;
 	padding-right:3px;
-	font-family: 'raleway-regular';
+	font-family: 'raleway-semibold';
 	  -webkit-touch-callout: none; /* iOS Safari */
     -webkit-user-select: none; /* Chrome/Safari/Opera */
      -khtml-user-select: none; /* Konqueror */
@@ -272,18 +275,19 @@ body{
 	background-color:#FDE3A7;
 	color:#333;
 	border:solid 1px #FDE3A7;
+	font-family: 'raleway-semibold';
 }
 .felvett{
 	background-color:#966B46;
 	color:#FFF;
 	border:solid 1px #966B46;
-	font-family: 'raleway-regular';
+	font-family: 'raleway-semibold';
 }
 .teljesitett{
 	background-color:#6C3C25;
 	color:#FFF;
 	border:solid 1px #6C3C25;
-	font-family: 'raleway-regular';
+	font-family: 'raleway-semibold';
 }
 .elokovetelmeny{
 	background-color:#67809F;
@@ -439,9 +443,28 @@ body{
 	width:40%;
 	float:left;
 }
+.szakiranyWrap h4{
+	margin-top:-10px;
+	padding-left:30px;
+}
+.selectWrap{
+	position:relative;
+	padding-left:30px;
+}
+.szakiranyWrap select{
+
+	font-family: 'raleway-semibold';
+	background:#E2D1C2;
+	border:solid 1px #999999;
+	border-radius:1px;
+}
+.szakiranyWrap select option{
+font-family: 'raleway-semibold';
+}
 .targyInfo{
 	position:relative;
-	width:58%;
+	width:50%;
+	min-width:600px;
 	float:left;
 	background:#E2D1C2;
 	border-radius:1px;
@@ -454,6 +477,28 @@ body{
 .targyInfoBox{
 	position:relative;
 	float:left;
-	width:25%;
+	width:30%;
+	margin:5px;
+}
+.boxNarrow{	
+	width:12%;
+}
+.boxNarrow2{	
+	width:18%;
+}
+.targyInfoTitle{
+	font-weight:bold;
+}
+.targyInfo a:link{
+	text-decoration:none;
+	color:#00B16A;
+}
+.targyInfo a:visited{
+	text-decoration:none;
+	color:#67809F;
+}
+#test1{
+	color:#000000;
+	    transition: color 2s ease 0s;
 }
 /* Info section END ********************************************/

@@ -13,8 +13,8 @@ $(document).ready(function() {
 	 	setData();
 		}
 		 setKredit();
+		 pushInfo(this.id,document.getElementById("type").getAttribute("data-szak")); 
 	 });
-
 });
 
 function setData() {

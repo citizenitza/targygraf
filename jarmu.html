@@ -16,6 +16,8 @@
  </head>
 
 <body onunload="pageUnload()">
+<div class="pageWrap">
+<div id="type" data-szak="jarmu"></div>
 <div class="container">
     <div class="sidebar">
 		<div class="sidebarInner">
@@ -75,6 +77,7 @@
 <div class="middleSection">
 	<div class="szakiranyWrap">
         <h4>Szakirány:</h4>
+        <div class="selectWrap">
         <select id="szakirany" onchange="szakirany()">
           <option>Válassz specializációt</option>
           <option data-szak="gep">Gépjárművek</option>
@@ -87,17 +90,28 @@
           <option data-szak="aut">Automatizált anyagmozgató berendezések és robotok</option>
           <option data-szak="fep">Járműfelépítmények</option>
         </select>
+        </div>
     </div>
     <div class="targyInfo">
-       	<div class="targyInfoBox">
+       	<div class="targyInfoBox boxNarrow">
             <div class="targyInfoTitle">Név:</div>
             <div class="targyInfoTitle">Kredit:</div>
             <div class="targyInfoTitle">Tárgykód:</div>
          </div>
          <div class="targyInfoBox">
-            <div class="targyInfoSingle" id="targyNev">Matematika A1a</div>
-            <div class="targyInfoSingle" id="targyKredit">Kredit: 6</div>
-            <div class="targyInfoSingle" id="targyKód">TE90AX00</div>
+            <div class="targyInfoSingle" id="targyNev"></div>
+            <div class="targyInfoSingle" id="targyKredit"></div>
+            <div class="targyInfoSingle" id="targyKod"></div>
+         </div>
+          <div class="targyInfoBox boxNarrow2">
+            <div class="targyInfoTitle">Követelmény:</div>
+            <div class="targyInfoTitle">Tanszék:</div>
+            <div class="targyInfoTitle">Felelős oktató:</div>
+         </div>
+         <div class="targyInfoBox">
+            <div class="targyInfoSingle" id="targyKovetelmeny"></div>
+            <div class="targyInfoSingle" id="targyTanszek"></div>
+            <div class="targyInfoSingle" id="targyFelelos"></div>
          </div>
     </div>
 </div>
@@ -125,8 +139,8 @@
             <div class="title">3. félév</div>
             	<div id="31" data-elo="21" data-uto="41 54 55" data-felveheto="0" data-status="0" data-kredit="4" class="targy">Matematika A3</div>
                 <div id="32" data-elo="23" data-uto="43 h58" data-felveheto="0" data-status="0" data-kredit="4" class="targy">Mechanika 2</div>
-                <div id="34" data-elo="21" data-uto="53 l47 l48 v58" data-felveheto="0" data-status="0" data-kredit="3" class="targy">Hőtan</div>
                 <div id="33" data-elo="" data-uto="" data-felveheto="0" data-status="0" data-kredit="4" class="targy">Menedzsment és vállakozásgazdaságtan</div>
+                <div id="34" data-elo="21" data-uto="53 l47 l48 v58" data-felveheto="0" data-status="0" data-kredit="3" class="targy">Hőtan</div>
                 <div id="35" data-elo="26" data-uto="45" data-felveheto="0" data-status="0" data-kredit="4" class="targy">Műszaki ábrázolás II.</div>
                 <div id="36" data-elo="" data-uto="44" data-felveheto="0" data-status="0" data-kredit="3" class="targy">Mérnöki számítások</div>
                 <div id="37" data-elo="22" data-uto="46 l57 y57" data-felveheto="0" data-status="0" data-kredit="6" class="targy">Járműszerkezeti anyagok és technológiák</div>
@@ -148,7 +162,7 @@
             	<div id="51" data-elo="43" data-uto="f66 f67 f68" data-felveheto="0" data-status="0" data-kredit="3" class="targy">Jármű vázszerkezetek</div>
                 <div id="52" data-elo="45" data-uto="62" data-felveheto="0" data-status="0" data-kredit="4" class="targy">Jármű- és hajtáselemek II.</div>
                 <div id="53" data-elo="34 41" data-uto="63 h67" data-felveheto="0" data-status="0" data-kredit="4" class="targy">Járművek hő- és áramlástech. berendezései I.</div>
-               <div id="54" data-elo="16 24 31" data-uto="" data-felveheto="0" data-status="0" data-kredit="3" class="targy">Logikai hálózatok</div>
+               <div id="54" data-elo="16 24 31" data-uto="m68" data-felveheto="0" data-status="0" data-kredit="3" class="targy">Logikai hálózatok</div>
                 <div id="55" data-elo="16 24 31" data-uto="" data-felveheto="0" data-status="0" data-kredit="3" class="targy">Irányítástechnika</div>
                             <div class="szakirany" id="szakBlock_5">Válassz specializációt
                             </div>
@@ -186,14 +200,10 @@
 <div class="minta elokovetelmeny">Előfeltétel</div>
 <div class="clear"></div>
 </div>
-<button onclick="myFunction()">Test</button>
-<br /><br />
-<div id="test1">asd</div>
-<div id="test2">asd</div>
-<div id="test3">asd</div>
-
    </div>
+
 </div>
 <a href="http://www.mystat.hu/query.php?id=156354" target="_blank"><script language="JavaScript" type="text/javascript" src="http://stat.mystat.hu/stat.php?h=1&amp;id=156354"></script></a><noscript><a href="http://www.mystat.hu/query.php?id=156354" target="_blank"><img src="http://stat.mystat.hu/collect.php?id=156354&amp;h=1" alt="mystat" border="0"></img></a></noscript>
+</div>
 </body>
 </html>
