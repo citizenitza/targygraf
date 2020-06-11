@@ -128,7 +128,7 @@ function getSzakirany(szak, felev) {
 											break;
 										case 7:
 												block =	createBlock("m75","","",3,"Megbízhatóság és biztonság");
-												block+= createBlock("m76","","",0,"Mobil gépek mechatronikája");
+												block+= createBlock("m76","","",4,"Mobil gépek mechatronikája");
 											break;	
 							}
 					break;
