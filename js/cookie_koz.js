@@ -1,6 +1,8 @@
 function pageUnload(){
-	var data_log = getData();
-	setCookie("data-log", data_log, 30);
+    // var data_koz = getData();
+    var szak = $("#szakirany").find(':selected').attr('data-szak');
+	var data_koz = getDataNew(szak);
+	setCookie("data-koz", data_koz, 30);
 	
 }
 function setCookie(cname, cvalue, exdays) {

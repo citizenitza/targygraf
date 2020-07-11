@@ -11,8 +11,8 @@
 <script src="js/save.js"></script>
 <script src="js/szakirany_koz.js"></script>
 <script src="js/pre_koz.js"></script>
-<!--<script src="js/cookie_jar.js"></script>
--->
+<script src="js/cookie_koz.js"></script>
+
  </head>
 
 <body onunload="pageUnload()">
@@ -81,10 +81,10 @@
 <div class="selectWrap">
 <select id="szakirany" onchange="szakirany()">
   <option>Válassz specializációt</option>
-  <option data-szak="koz">Közúti közlekedési folyamatok</option>
-  <option data-szak="vas">Vasúti közlekedési folyamatok</option>
-  <option data-szak="leg">Légi közlekedési folyamatok</option>
-  <option data-szak="viz">Vízi közlekedési folyamatok</option>
+  <option data-szak="koz" value="1">Közúti közlekedési folyamatok</option>
+  <option data-szak="vas" value="2">Vasúti közlekedési folyamatok</option>
+  <option data-szak="leg" value="3">Légi közlekedési folyamatok</option>
+  <option data-szak="viz" value="4">Vízi közlekedési folyamatok</option>
 </select>
 </div>
     </div>
@@ -195,7 +195,7 @@
    
     <div class="banner"> 
     <div class="gombWrap">Színmagyarázat:</div>
-<div class="minta">Nem felvehető</div>
+<div class="minta" onclick="getDataNew('43asd')">Nem felvehető</div>
 <div class="minta felveheto">Felvehető</div>
 <div class="minta felvett">Felvett</div>
 <div class="minta teljesitett">Teljesített</div>
@@ -204,9 +204,10 @@
 <div class="clear"></div>
 </div>
 <br /><br />
+<!--
 <div id="test1">asd</div>
 <div id="test2">asd</div>
-
+-->
    </div>
    <a href="https://www.mystat.hu/query.php?id=158092" target="_blank"><script language="JavaScript" type="text/javascript" src="https://stat.mystat.hu/stat.php?h=1&amp;id=158092"></script></a><noscript><a href="https://www.mystat.hu/query.php?id=158092" target="_blank"><img src="https://stat.mystat.hu/collect.php?id=158092&amp;h=1" alt="mystat" border="0"></img></a></noscript>
 </div>

@@ -3,6 +3,39 @@ $(document).ready(function() {
 	
 
 });
+function getDataNew(szakirany) {
+	var result = "";
+	result += szakirany + "-";
+    jQuery(function($) {
+		var cusid_ele = document.getElementsByClassName('targy');
+		var currentSemester = 1;
+		for (var i = 0; i < cusid_ele.length; ++i) {
+			var item = cusid_ele[i];
+			var subjectSemester = item.getAttribute("id")[0];
+			if(!is_numeric(subjectSemester)) { //first item is a char
+				subjectSemester = item.getAttribute("id")[1];
+			}
+
+			if(subjectSemester == currentSemester){
+				result += item.getAttribute("data-status");
+			}else{
+				// result += "_";
+				currentSemester++;
+				i--;
+				if(currentSemester == 8){//last semester
+				 	break;
+				}else{
+					continue;
+				}
+			}
+		}
+	});
+	alert(result);
+	return result;
+}
+function is_numeric(str){
+    return /^\d+$/.test(str);
+}
 
 function getData() {
 	var result = "";
@@ -65,6 +98,38 @@ function getData() {
 		
 	});
 	return result;
+}
+function decodeDataSzakirany(data) {
+	jQuery(function($) {
+		var szakirany = data.split("-")[0];
+		if(szakirany == "undefined"){
+				//Nop
+		}else{
+			for(var i = 0;i<$('#szakirany option').length;i++){
+				if($('#szakirany option')[i].getAttribute("data-szak") == szakirany){
+				document.getElementById("szakirany").value = $('#szakirany option')[i].value;
+				$("#szakirany").val(i)
+				}
+			}
+		}
+	});
+}
+function decodeDataTargyak(data){
+	jQuery(function($) {
+		var datatargyak= data.split("-")[1].split("");
+		var cusid_ele = document.getElementsByClassName('targy');
+
+		for(var i = 0; i< datatargyak.length;i++){
+			var item = cusid_ele[i];  
+			if(datatargyak[i] !=0){
+				item.setAttribute('data-status', datatargyak[i]);
+			}	
+		}
+	});
+}
+function selectElement(id, valueToSelect) {    
+    let element = document.getElementById(id);
+    element.value = valueToSelect;
 }
 function decodeData(data) {
 	
@@ -153,7 +218,7 @@ var urlParam = function(name, w){
     return !val ? '':val[1];
 }
 function debugOnclick(){
-
+	alert(getData());
 }
 function debugOnclick2(){
 

@@ -1,12 +1,8 @@
 function pageUnload(){
-	
-//	for(var i=1;i<=4;i++){
-//		document.getElementById("szakBlock_"+i).innerHTML = "";
-//	} 
-	//cookie interference
-	
-	var data_jar = getData();
-	setCookie("data-jar", data_jar, 30);
+    var szak = $("#szakirany").find(':selected').attr('data-szak');
+	var data_jar = getDataNew(szak);
+    setCookie("data-jar", data_jar, 30);
+    
 }
 
 function setCookie(cname, cvalue, exdays) {
@@ -15,7 +11,6 @@ function setCookie(cname, cvalue, exdays) {
     var expires = "expires="+ d.toUTCString();
     document.cookie = cname + "=" + cvalue + ";" + expires;
 }
-
 function getCookie(cname) {
     var name = cname + "=";
     var ca = document.cookie.split(';');

@@ -1,5 +1,6 @@
 
 function szakirany() {
+	// alert('szakirany()');
     jQuery(function($) {
 		var szak = $("#szakirany").find(':selected').attr('data-szak');
 			for (var i=4;i<=6;i++){
@@ -88,7 +89,7 @@ function getSzakirany(szak, felev) {
 				default:
 	}	
 		setData();
-			setState();
+		setState();
     return block;
 }
 function createBlock(id,elo,uto,kredit,nev){
